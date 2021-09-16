@@ -1,0 +1,500 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+    overflow-x: hidden;
+
+}
+body, header, main, footer {
+    position: relative;
+}
+element.style {
+    display: none;
+}
+element.style {
+    display: none;
+}
+.skip-link__wrapper {
+    position: absolute;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+
+body, header, main, footer {
+    position: relative;
+}
+
+@media only screen and (max-width: 600px){
+.search-navigation {
+    position: static;
+    padding-bottom: 20px;
+}
+}
+.search-navigation {
+    background-color: #00BFFF;
+    position: relative;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+    padding-bottom: 10px;
+}
+.container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.col-9, .col-10, .col-11, .col-12, .col, .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl, .col-xl-auto {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.navbar-brand {
+    display: inline-block;
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+}
+@media only screen and (max-width: 600px){
+.search-navigation .logo img {
+    width: 150px;
+    margin-top: 15px;
+}
+}
+.search-navigation .logo .add-listing-mobile {
+    display: none;
+}
+@media only screen and (max-width: 600px){
+.search-navigation .add-listing-mobile {
+    display: block !important;
+    float: right;
+    margin-top: 5px;
+    background: #050708;
+    padding: 7px;
+    border-radius: 2px;
+    color: #fff;
+    font-weight: 100;
+    font-size: 14px;
+}
+}
+@media only screen and (max-width: 600px){
+a.add-listing-mobile {
+    text-decoration: none;
+}
+}
+@media only screen and (max-width: 600px){
+.add-listing-mobile span {
+    margin-right: 5px;
+}
+}
+.fa, .fas {
+    font-weight: 900;
+}
+
+.fa, .far, .fas {
+    font-family: "Font Awesome 5 Free";
+}
+.fa, .fab, .fal, .far, .fas {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+@media only screen and (max-width: 600px){
+.search-navigation .biz-search form {
+    padding: 18px;
+    text-align: center;
+    display: none;
+}
+}
+.search-navigation .biz-search form {
+    margin-top: 10px;
+}
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -5px;
+    margin-left: -5px;
+}
+.form-row>.col, .form-row>[class*="col-"] {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl, .col-xl-auto {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.search-navigation .biz-search form .sr-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+.sr-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+.search-form .input-group {
+    position: relative;
+    margin: 0 !important;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+}
+.search-navigation .biz-search form .input-group-text {
+    background-color: #ffff;
+    border: 0;
+}
+.search-navigation .biz-search form .sr-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+.search-form .input-group {
+    position: relative;
+    margin: 0 !important;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+}
+/* .search-form .input-group .input-group-prepend {
+    position: absolute;
+    left: 0;
+    top: 1px;
+    z-index: 2;
+} */
+
+/* .input-group-prepend {
+    margin-right: -1px;
+} */
+/* .input-group-prepend, .input-group-append {
+    display: flex;
+} */
+/* .form-row>.col, .form-row>[class*="col-"] {
+    padding-right: 5px;
+    padding-left: 5px;
+} */
+@media only screen and (max-width: 600px){
+.search-btn {
+    text-align: center;
+}
+}
+.search-navigation .biz-search form .btn-primary {
+    background-color: #fff;
+    border-color: #fff;
+    text-transform: uppercase;
+    font-family: "Roboto",sans-serif;
+    font-weight: 100;
+    font-size: 12px;
+    padding: 10px;
+    color: #00BFFF;
+}
+@media only screen and (max-width: 600px){
+.search-navigation .search-nav {
+    display: none;
+}
+}
+@media only screen and (max-width: 600px){
+.search-navigation .search-nav a:nth-child(1) {
+    padding: 0;
+    font-size: 14px;
+}
+}
+.search-navigation .search-nav a {
+    color: #000;
+    text-decoration: none;
+}
+.search-navigation .search-nav a span {
+    display: inline-block;
+    text-align: center;
+    border-radius: 100%;
+    border: 1px solid #fff;
+    padding: 2px;
+    width: 30px;
+    height: 30px;
+    color: #000;
+    margin-right: 10px;
+}
+.hidden {
+    display: none !important;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+.container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+iframe {
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+}
+.contact-us .container {
+    background: #f6f6f6;
+    padding: 20px;
+}
+.contact-us .container .contact-details {
+    margin-top: 20px;
+}
+.contact-us .container .contact-details .telephone, .contact-us .container .contact-details .open-time, .contact-us .container .contact-details .email {
+    background: white;
+    border: 1px solid #ccc;
+    margin: 0px auto 10px auto;
+}
+.contact-us .contact-form {
+    margin-top: 20px;
+}
+.contact-us .contact-form .contact-form-inner {
+    background: white;
+    padding: 20px;
+}
+.contact-us .contact-form form {
+    padding: 20px;
+}
+form {
+    display: block;
+    margin-top: 0em;
+}
+.contact-us .websites {
+    background: #fff;
+}
+.contact-us .websites .travel-discover, .contact-us .websites .hangout, .contact-us .websites .yellow-link {
+    text-align: center;
+}
+.contact-us .websites .travel-discover a, .contact-us .websites .hangout a, .contact-us .websites .yellow-link a {
+    text-decoration: none;
+    color: #000;
+    text-transform: capitalize;
+}
+.contact-us .websites .travel-discover a img, .contact-us .websites .hangout a img, .contact-us .websites .yellow-link a img {
+    width: 120px;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+.contact-us .websites .travel-discover a, .contact-us .websites .hangout a, .contact-us .websites .yellow-link a {
+    text-decoration: none;
+    color: #000;
+    text-transform: capitalize;
+}
+
+a, area, button, [role="button"], input:not([type="range"]), label, select, summary, textarea {
+    touch-action: manipulation;
+}
+.contact-us .contact-form form fieldset {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -5px;
+    margin-left: -5px;
+}
+fieldset {
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+.contact-us .contact-form form fieldset .fieldset-wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -5px;
+    margin-left: -5px;
+}
+.form-group {
+    margin-bottom: 1rem;
+}
+.contact-us .contact-form form label {
+    font-family: "Roboto",sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+}
+.contact-us .contact-form form label {
+    font-family: "Roboto",sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+}
+.form-text {
+    display: block;
+    margin-top: .25rem;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+}
+button, input {
+    overflow: visible;
+}
+input, button, select, optgroup, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+div {
+    display: block;
+}
+.contact-us .contact-form form label {
+    font-family: "Roboto",sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+}
+element.style {
+    width: 250px;
+    height: 40px;
+    border: 1px solid rgb(193, 193, 193);
+    margin: 10px 25px;
+    padding: 0px;
+    resize: none;
+    display: none;
+}
+textarea {
+    overflow: auto;
+    resize: vertical;
+}
+input, button, select, optgroup, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+.contact-us .contact-form form .form-actions .form-submit {
+    color: #050708;
+    background-color: #fef200;
+    border-color: #fef200;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+}
+.contact-us .contact-form form .form-actions .button-primary {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.contact-us .container .contact-details .telephone span, .contact-us .container .contact-details .open-time span, .contact-us .container .contact-details .email span {
+    text-align: center;
+    display: block;
+    margin-top: 15px;
+    font-size: 22px;
+}
+.contact-us .container .contact-details .telephone p, .contact-us .container .contact-details .open-time p, .contact-us .container .contact-details .email p {
+    text-align: center;
+    font-weight: 100;
+    margin-top: 10px;
+    font-family: "Roboto",sans-serif;
+    font-size: 14px;
+}
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+a, area, button, [role="button"], input:not([type="range"]), label, select, summary, textarea {
+    touch-action: manipulation;
+}
+.contact-us .contact-form form .form-actions .form-submit {
+    color: #050708;
+    background-color: #00BFFF;
+    border-color: #00BFFF;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+}

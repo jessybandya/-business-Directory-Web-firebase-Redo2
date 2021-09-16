@@ -1,0 +1,242 @@
+.advertise-content, .quality-policy {
+  margin: 0 0 40px 0;
+}
+
+article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block;
+}
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.advertise-content .advertise-options, .quality-policy .advertise-options {
+  background: #fbfafa;
+  padding: 20px;
+}
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl, .col-xl-auto {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.advertise-content .products .product {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: block;
+}
+@media only screen and (max-width: 600px){
+.advertise-content .products .product:nth-child(odd) .img {
+    float: left;
+}
+}
+
+.advertise-content .products .product:nth-child(odd) .img {
+    float: right;
+}
+.advertise-content .yellowprint-img, .advertise-content .yellowonline, .advertise-content .yellowdigita-img, .quality-policy .yellowprint-img, .quality-policy .yellowonline, .quality-policy .yellowdigita-img {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.advertise-content .yellowprint-img img, .advertise-content .yellowonline img, .advertise-content .yellowdigita-img img, .quality-policy .yellowprint-img img, .quality-policy .yellowonline img, .quality-policy .yellowdigita-img img {
+  width: 100%;
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+@media only screen and (max-width: 600px){
+.advertise-content .products .product:nth-child(odd) .copy {
+    float: right;
+}
+}
+
+.advertise-content .products .product:nth-child(odd) .copy {
+    float: left;
+}
+.advertise-content .yellowprint-copy, .advertise-content .yellowonline-copy, .advertise-content .yellowdigita-copy, .quality-policy .yellowprint-copy, .quality-policy .yellowonline-copy, .quality-policy .yellowdigita-copy {
+    margin-top: 50px;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+.advertise-content .yellowprint-copy p, .advertise-content .yellowonline-copy p, .advertise-content .yellowdigita-copy p, .quality-policy .yellowprint-copy p, .quality-policy .yellowonline-copy p, .quality-policy .yellowdigita-copy p {
+  text-align: start;
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 25px;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.advertise-content .lead-form, .advertise-content .advertise-lead-form, .advertise-content .section-advertise-us, .quality-policy .lead-form, .quality-policy .advertise-lead-form, .quality-policy .section-advertise-us {
+  padding-top: 25px;
+}
+.advertise-content .lead-form h4, .advertise-content .lead-form h1, .advertise-content .advertise-lead-form h4, .advertise-content .advertise-lead-form h1, .advertise-content .section-advertise-us h4, .advertise-content .section-advertise-us h1, .quality-policy .lead-form h4, .quality-policy .lead-form h1, .quality-policy .advertise-lead-form h4, .quality-policy .advertise-lead-form h1, .quality-policy .section-advertise-us h4, .quality-policy .section-advertise-us h1 {
+  font-size: 24px;
+  margin-top: 20px;
+  font-weight: 300;
+  font-family: "Roboto",sans-serif;
+  text-align: center;
+}
+.advertise-content .lead-form form, .advertise-content .advertise-lead-form form, .advertise-content .section-advertise-us form, .quality-policy .lead-form form, .quality-policy .advertise-lead-form form, .quality-policy .section-advertise-us form {
+  margin-top: 25px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #fafafa;
+  -webkit-box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 45%);
+  box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 45%);
+  padding: 15px;
+}
+.form-group {
+  margin-bottom: 1rem;
+}
+label {
+  display: inline-block;
+  margin-bottom: .5rem;
+}
+
+a, area, button, [role="button"], input:not([type="range"]), label, select, summary, textarea {
+  touch-action: manipulation;
+}
+.form-text {
+  display: block;
+  margin-top: .25rem;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + .75rem + 2px);
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+}
+button, input {
+  overflow: visible;
+}
+
+input, button, select, optgroup, textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+.form-group {
+  margin-bottom: 1rem;
+}
+label {
+  display: inline-block;
+  margin-bottom: .5rem;
+}
+textarea.form-control {
+  height: auto;
+}
+button, html [type="button"], [type="reset"], [type="submit"] {
+  -webkit-appearance: button;
+}
+
+.element-invisible {
+  display: none !important;
+}
+element.style {
+  width: 304px;
+  height: 78px;
+}
+.advertise-content .lead-form form .form-actions .form-submit, .advertise-content .advertise-lead-form form .form-actions .form-submit, .advertise-content .section-advertise-us form .form-actions .form-submit, .quality-policy .lead-form form .form-actions .form-submit, .quality-policy .advertise-lead-form form .form-actions .form-submit, .quality-policy .section-advertise-us form .form-actions .form-submit {
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  color: #050708;
+  background-color: #00BFFF;
+  border-color: #00BFFF;
+  margin-top: 20px;
+  width: 100%;
+  cursor: pointer;
+}
+article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block;
+}
+
+body, header, main, footer {
+  position: relative;
+}
+.advertise-content, .quality-policy {
+  margin: 0 0 40px 0;
+}
+
+
+.previewImage.vanish {
+  display: none;
+}
+
+.previewImage {
+  width: auto;
+  margin: 0;
+  margin-left: 10px;
+}
+
+.previewImaage {
+  height: 100px;
+  width: auto;
+  border-radius: 10px;
+}
+.inputForUpload > textarea {
+  margin-left: 10px;
+  background-color: transparent;
+  outline: none;
+  width: 100%;
+  border: none;
+  font-size: 24px;
+  font-weight: 400;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgba(0, 0, 0, 0.516);
+}
+
+.inputForUpload > textarea::-webkit-input-placeholder {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #90949c;
+}
+
+.inputForUpload > textarea::-webkit-scrollbar {
+  width: 10px;
+}
