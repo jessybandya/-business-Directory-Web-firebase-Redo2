@@ -3,7 +3,7 @@ import "./styles.css"
 import Header from "../Header"
 import Footer from "../Footer"
 import {storage,auth,db} from './../firebase';
-import { useHistory, Link } from 'react-router-dom';
+import { useHistory, Link,useParams } from 'react-router-dom';
 import FormSelect from './../forms/FormSelect';
 
 function Registerbusiness({user}) {
@@ -17,6 +17,8 @@ function Registerbusiness({user}) {
   const [descriptions, setDescriptions] = useState("");
   const [progress, setProgress] = useState(0);
   const [imageURL, setImageURL] = useState('');
+  let { uid } = useParams();
+
 
   if(!user){
     history.push("/login-client");
@@ -121,7 +123,7 @@ if (!businessName.trim()) {
     return (
         <div>
             <div>
-            <Header />
+            <Header uid={uid}/>
 
             <section  class="advertise-banner">
         <div class="container-fluid">

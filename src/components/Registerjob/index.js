@@ -28,6 +28,7 @@ function Registerjob({user}) {
   const [companyEmail,setCompanyEmail]=useState("")
   const [phoneCompany,setPhoneCompany]=useState("")
   const [web, setWebsite] = useState("")
+
   if(!user){
     history.push("/login-client");
 }
@@ -137,7 +138,7 @@ const addJob = () =>{
       <a style={{display: "none"}} href="#yellowmobile" class="skip-link visually-hidden visually-hidden--focusable" id="skip-link">Jump to navigation
       </a>
     </p>
-                        <Header />
+                        <Header uid={uid}/>
 
 
                         {/* type="button" className="btn btn-primary"  class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"  data-toggle="" style={{ marginLeft : '30px', marginTop : '10px', marginBottom : '10px' }} */}
@@ -185,7 +186,7 @@ const addJob = () =>{
     <Label style={{color: "#888888"}} for="location">Location from Google</Label>
 
 <GooglePlacesAutocomplete
-      apiKey="AIzaSyDb8HjXItzxXeuc9lZo99ArryGY03MVtzI"
+      apiKey="AIzaSyDCDCEXLhqk7UKW8QG0gd8Q6E7brwxVAcE"
     />
     {/* <Input type="text" name="location" id="location" placeholder="Enter your location" required/> */}
     </FormGroup>

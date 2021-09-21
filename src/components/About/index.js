@@ -2,17 +2,20 @@ import React from 'react'
 import Header from "../Header"
 import Footer from "../Footer"
 import './styles.css'
+import { useParams } from 'react-router';
 
-function About() {
+function About({user}) {
+  let { uid } = useParams();
+
     return (
         <>
    <body class="html not-front not-logged-in one-sidebar sidebar-first page-node page-node- page-node-55 node-type-postel-pages section-postel" >
    <p class="skip-link__wrapper" style={{display: "none"}}>
       <a style={{display: "none"}} href="#yellowmobile" class="skip-link visually-hidden visually-hidden--focusable" id="skip-link">Jump to navigation</a>
     </p>
-             <Header className="sticky"/>
+             <Header uid={uid} className="sticky"/>
             <main style={{marginTop:70}}>
-                            <h1 class="hidden" tyle={{display: "none"}}>About Us</h1>
+                            <h1 class="hidden" tyle={{display: "none"}}>{uid}</h1>
                              <section class="advertise-banner">
                                <div class="container-fluid">
                                  <div class="row">

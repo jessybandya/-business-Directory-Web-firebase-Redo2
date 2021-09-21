@@ -5,16 +5,22 @@ import {auth,db} from './../firebase'
 import { useHistory,useParams } from 'react-router-dom';
 import Header from "../Header"
 import Footer from "../Footer"
+import { Form, FormGroup, Label, Input , Modal, ModalHeader, ModalBody,Table} from 'reactstrap';
+import FormSelect from './../forms/FormSelect';
+import Button from '@material-ui/core/Button';
+import { Category } from '@material-ui/icons';
 
-function Hospitals() {
-    let {uid} = useParams();
+function Searchresults() {
+  let { uid, name, category } = useParams();
     const history = useHistory("");
     const [posts, setPosts] = useState([]);
+    const [location, setLocation] = useState("")
+    const [category1, setCategory1] = useState("")
    const {currentUser} = auth
 
 
    useEffect(() => {
-    db.collection('businesses').where("industry","==", "Hospital").orderBy("timestamp", "desc").onSnapshot(snapshot => {
+    db.collection('businesses').where("industry","==",`${category}`).orderBy("timestamp", "desc").onSnapshot(snapshot => {
         setPosts(snapshot.docs.map(doc => ({
             id: doc.id,
             post: doc.data(),
@@ -101,7 +107,193 @@ function Hospitals() {
 
                                                         
 <section class="results-shown">                                                            
+<div style={{display: "flex",flexWrap: "wrap",alignItems: "center"}}>
+<FormGroup>
+ 
 
+ <FormSelect  style={{color: "#555",border: "1px solid #888888",borderRadius: 5,marginLeft:10}}
+                   
+                   
+                    
+                   options={[{
+                     value: "",
+                     name: "browse business by location"
+                   },
+                   {
+                     value: "Baringo",
+                     name: "Baringo"
+                   }, {
+                     value: "Bomet‎",
+                     name: "Bomet"
+                   }, {
+                     value: "Bungoma",
+                     name: "Bungoma"
+                   }, {
+                     value: "Busia",
+                     name: "Busia"
+                   }, {
+                     value: "Elgeyo-Marakwet",
+                     name: "Elgeyo-Marakwet"
+                   }, {
+                     value: "Embu",
+                     name: "Embu"
+                   }, {
+                     value: "Garissa",
+                     name: "Garissa"
+                   }, {
+                     value: "Homa Bay",
+                     name: "Homa Bay"
+                   }, {
+                     value: "Isiolo",
+                     name: "Isiolo"
+                   }, {
+                     value: "Kajiado",
+                     name: "Kajiado"
+                   }, {
+                     value: "Kakamega",
+                     name: "Kakamega"
+                   }, {
+                     value: "Kericho",
+                     name: "Kericho"
+                   }, {
+                     value: "Kiambu",
+                     name: "Kiambu"
+                   }, {
+                     value: "Kilifi",
+                     name: "Kilifi"
+                   }, {
+                     value: "Kirinyaga",
+                     name: "Kirinyaga"
+                   }, {
+                     value: "Kisii",
+                     name: "Kisii"
+                   }, {
+                     value: "Kisumu",
+                     name: "Kisumu"
+                   }, {
+                     value: "Kitui",
+                     name: "Kitui"
+                   }, {
+                     value: "Kwale",
+                     name: "Kwale"
+                   }, {
+                     value: "Laikipia",
+                     name: "Laikipia"
+                   }, {
+                     value: "Lamu",
+                     name: "Lamu"
+                   }, {
+                     value: "Machakos",
+                     name: "Machakos"
+                   }, {
+                     value: "Makueni",
+                     name: "Makueni‎"
+                   }, {
+                     value: "Mandera",
+                     name: "Mandera"
+                   }, {
+                     value: "Marsabit",
+                     name: "Marsabit"
+                   }, {
+                     value: "Meru",
+                     name: "Meru"
+                   }, {
+                     value: "Migori",
+                     name: "Migori"
+                   }, {
+                     value: "Mombasa",
+                     name: "Mombasa"
+                   }, {
+                     value: "Murang'a",
+                     name: "Murang'a"
+                   }, {
+                     value: "Nairobi‎",
+                     name: "Nairobi‎"
+                   }, {
+                     value: "Nakuru",
+                     name: "Nakuru"
+                   }, {
+                     value: "Nandi",
+                     name: "Nandi"
+                   }, {
+                     value: "Narok",
+                     name: "Narok"
+                   }, {
+                     value: "Nyamira",
+                     name: "Nyamira"
+                   }, {
+                     value: "Nyandarua",
+                     name: "Nyandarua"
+                   }, {
+                     value: "Nyeri",
+                     name: "Nyeri"
+                   }, {
+                     value: "Samburu",
+                     name: "Samburu"
+                   }, {
+                     value: "Siaya",
+                     name: "Siaya"
+                   }, {
+                     value: "Taita-Taveta",
+                     name: "Taita-Taveta"
+                   }, {
+                     value: "Tana River",
+                     name: "Tana River"
+                   }, {
+                     value: "Tharaka-Nithi",
+                     name: "Tharaka-Nithi"
+                   }, {
+                     value: "Trans-Nzoia",
+                     name: "Trans-Nzoia"
+                   }, {
+                     value: "Turkana",
+                     name: "Turkana"
+                   }, {
+                     value: "Uasin Gishu",
+                     name: "Uasin Gishu"
+                   }, {
+                     value: "Vihiga",
+                     name: "Vihiga"
+                   }, {
+                     value: "Wajir",
+                     name: "Wajir"
+                   }, {
+                     value: "West Pokot",
+                     name: "West Pokot"
+                   }]} 
+                   required=""             
+                   onChange={(e) => setLocation(e.target.value)} type="text" 
+                 />
+
+
+
+ 
+ </FormGroup>
+
+ <FormGroup>
+ 
+
+ <FormSelect  style={{color: "#555",border: "1px solid #888888",borderRadius: 5,marginLeft:10}}
+                   
+                   
+                    
+                   options={[{
+                     value: "",
+                     name: "business by category"
+                   },
+                         {
+                           value: `${category}`,
+                           name: `${category}`
+                         }]} 
+                         required=""             
+                         onChange={(e) => setCategory1(e.target.value)} type="text" 
+                       />   
+
+
+
+ 
+ </FormGroup>
+</div>    
            
 {
     posts.map(({ id, post }) => (
@@ -120,7 +312,9 @@ function Hospitals() {
         ownerphotoURL={post.ownerphotoURL}
         phone={post.phone}
         postImage={post.postImage} 
- 
+        location1={location}
+        name={name}
+        category1={category}
         />
 
     ))
@@ -145,4 +339,4 @@ function Hospitals() {
     )
 }
 
-export default Hospitals
+export default Searchresults

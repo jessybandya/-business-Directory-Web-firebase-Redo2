@@ -9,9 +9,12 @@ import Header from '../Header';
 
 import PhoneEnabledIcon from '@material-ui/icons/PhoneEnabled';
 import EmailIcon from '@material-ui/icons/Email';
+import { useParams } from 'react-router';
 
 
 function Contact() {
+  let { uid } = useParams();
+
     return (
         <>
 <body class="html not-front not-logged-in one-sidebar sidebar-first page-node page-node- page-node-22 node-type-page section-contact-us-we-value-your-feedback-we-listen-you" >
@@ -21,7 +24,7 @@ function Contact() {
     </p>
 
     
-   <Header />
+   <Header uid={uid}/>
 
 
                <main style={{marginTop:70}}>

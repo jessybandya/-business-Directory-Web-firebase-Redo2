@@ -5,9 +5,15 @@ import Footer from "../Footer"
 import { Jumbotron, Container,Col,Row } from 'reactstrap';
 import bgimage from '../../images/picnews.jpg'
 import image from '../../images/news.jpg'
+import { useParams } from 'react-router';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+// import { Carousel } from 'react-responsive-carousel';
+import Carousel1 from "../Carousel"
+import Carousel from 'react-bootstrap/Carousel'
 
 
 function Blog() {
+  let {uid} = useParams();
     return (
         <>
         <body class="html not-front not-logged-in one-sidebar sidebar-first page-node page-node- page-node-22 node-type-page section-contact-us-we-value-your-feedback-we-listen-you" >
@@ -15,22 +21,64 @@ function Blog() {
       <a style={{display: "none"}} href="#yellowmobile" class="skip-link visually-hidden visually-hidden--focusable" id="skip-link">Jump to navigation
       </a>
     </p>
-                        <Header />
+                        <Header uid={uid}/>
                         <div style={{marginTop: 70}}>
-      <Jumbotron fluid style={{ backgroundImage: `url(${bgimage})`, backgroundSize: 'cover' }} className="text-light">
+      {/* <Jumbotron fluid style={{ backgroundImage: `url(${bgimage})`, backgroundSize: 'cover' }} className="text-light">
         <Container fluid>
           <h1 className="display-3 text-center">News</h1>
           <p className="lead text-center">This page for news.</p>
         </Container>
-      </Jumbotron>
+      </Jumbotron> */}
+     
+
+
+
 
     <Container>
+    <Carousel style={{opacity: 0.9}} variant="dark">
+  <Carousel.Item  >
+    <img
+      className="d-block w-100"
+      style={{height:400,width: "100%"}}
+      src="https://thumbs.dreamstime.com/b/nairobi-skyline-sunset-sun-sets-over-section-downtown-nairobi-kenya-s-capital-city-167705886.jpg"
+      alt="First slide"
+    />
+    <Carousel.Caption>
+      <h5>First slide label</h5>
+      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      style={{height:400,width: "100%"}}
+      src="https://media.istockphoto.com/photos/nairobi-cityscape-capital-city-of-kenya-picture-id637912692?k=20&m=637912692&s=612x612&w=0&h=uHa90J-jGXws6mo7yeOKLI-ta_RYGErtbsqhtPVxBHk="
+      alt="Second slide"
+    />
+    <Carousel.Caption>
+      <h5>Second slide label</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      style={{height:400,width: "100%"}}
+      src="https://www.africainvestor.com/wp-content/uploads/2017/12/cape-town-N2-600x350.jpg"
+      alt="Third slide"
+    />
+    <Carousel.Caption>
+      <h5>Third slide label</h5>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+</Carousel>
       <Row>
         <Col>
         <div className="card mb-3">
         <div className="col-md-20">
             <div className="card-body">
-            <img src={image} className="card-img" alt="image" width="200px"/>
+            {/* <img src={image} className="card-img" alt="image" width="200px"/> */}
             <br></br>
                 <h5 className="card-title">How to Get an IT Job: Succeeding in Your IT Career</h5>
                 <small><p>August 26, 2018</p></small>

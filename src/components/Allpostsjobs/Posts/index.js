@@ -63,12 +63,18 @@ function Posts({address,postId,location1,businessName,companyName,descriptions,i
      </div>
      {auth?.currentUser?.uid &&(
     <div style={{display: "flex",marginTop:10}}>
-    <a itemprop="telephone" title={`Call Now ${businessName}`} data-business="Avenue Motors Ltd" data-catname="Car Hire" data-value="8" href={`tel:${phone}`} class="biztelephone">
+      {auth?.currentUser?.uid &&(
+        <>
+            <a itemprop="telephone" title={`Call Now ${businessName}`} data-business="Avenue Motors Ltd" data-catname="Car Hire" data-value="8" href={`tel:${phone}`} class="biztelephone">
     <Button style={{backgroundColor: "#00BFFF",marginLeft:0,color: "#fff"}} className="card-text "  ><i className="fa fa-edit">Call now</i></Button>
 </a> 
-    <a href={`/businesses-email/${ownerUsername}/${phone}/${ownerEmail}/${ownerId}/${businessName}/${industry}`} title={`send an email message to ${businessName}`} class="bizemail">
+
+    <a href={`/businesses-email/${postId}/${ownerUsername}/${phone}/${ownerEmail}/${ownerId}/${businessName}/${industry}/${auth?.currentUser?.uid}`} title={`send an email message to ${businessName}`} class="bizemail">
     <Button style={{backgroundColor: "#00BFFF",marginLeft:10,color: "#fff"}} className="card-text "  ><i className="fa fa-edit">Message</i></Button>
         </a> 
+        </>
+      )}
+
         </div>
      )}
  
@@ -189,12 +195,17 @@ function Posts({address,postId,location1,businessName,companyName,descriptions,i
      <p className="card-text">Website: <small className="text-muted">{web}</small></p>
      </div>
      <div style={{display: "flex",marginTop:10}}>
+       {auth?.currentUser?.uid &&(
+         <>
      <a itemprop="telephone" title={`Call Now ${businessName}`} data-business="Avenue Motors Ltd" data-catname="Car Hire" data-value="8" href={`tel:${phone}`} class="biztelephone">
      <Button style={{backgroundColor: "#00BFFF",marginLeft:0,color: "#fff"}} className="card-text "  ><i className="fa fa-edit">Call now</i></Button>
 </a> 
-     <a href={`/businesses-email/${postId}/${ownerUsername}/${phone}/${ownerEmail}/${ownerId}/${businessName}/${industry}`} title={`send an email message to ${businessName}`} class="bizemail">
+<a href={`/businesses-email/${postId}/${ownerUsername}/${phone}/${ownerEmail}/${ownerId}/${businessName}/${industry}/${auth?.currentUser?.uid}`} title={`send an email message to ${businessName}`} class="bizemail">
      <Button style={{backgroundColor: "#00BFFF",marginLeft:10,color: "#fff"}} className="card-text "  ><i className="fa fa-edit">Message</i></Button>
          </a> 
+         </>
+       )}
+
          </div>
 
 

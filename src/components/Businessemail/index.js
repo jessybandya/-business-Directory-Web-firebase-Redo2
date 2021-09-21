@@ -14,7 +14,7 @@ import SendIcon from '@material-ui/icons/Send';
 function Businessemail({user}) {
 
         const history = useHistory("");
-        const { postId, name, phone, email, ownerId,businessName, category} = useParams();
+        const { postId, name, phone, email, ownerId,businessName, category,uid} = useParams();
         const [name1, setName1] = useState("");
         const [phone1, setPhone1] = useState("");
         const [email1, setEmail1] = useState("");
@@ -68,7 +68,7 @@ function Businessemail({user}) {
       <a style={{display: "none"}} href="#yellowmobile" class="skip-link visually-hidden visually-hidden--focusable" id="skip-link">Jump to navigation
       </a>
     </p>
-                        <Header />
+                        <Header uid={uid}/>
 
         <div>
                 <main style={{marginTop:70}}> 

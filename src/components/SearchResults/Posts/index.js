@@ -1,10 +1,10 @@
 import React from 'react'
 import { auth } from '../../firebase'
 
-function Posts({address,postId,businessName,descriptions,industry,location,ownerEmail,timestamp,ownerId,ownerUsername,ownerphotoURL,phone,postImage,category1,location1}) {
+function Posts({address,postId,businessName,name,descriptions,industry,location,ownerEmail,timestamp,ownerId,ownerUsername,ownerphotoURL,phone,postImage,category1,location1}) {
     return (
         <div>
-            {location1 === location && category1 === industry &&(
+            {businessName === name && location === location1 &&(
                 <>
 <ul class="search-results container" id="search-results-items"> 
     <li itemprop="itemListElement" itemscope itemtype="#"> 
@@ -49,7 +49,7 @@ function Posts({address,postId,businessName,descriptions,industry,location,owner
                 </>
             )}
 
-                      {location1 === '' && category1 === '' &&(
+                      {location1 === '' && businessName === name  &&(
                 <>
 <ul class="search-results container" id="search-results-items"> 
     <li itemprop="itemListElement" itemscope itemtype="#"> 

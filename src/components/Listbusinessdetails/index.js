@@ -12,7 +12,7 @@ import { useHistory } from 'react-router-dom';
 
 
 function Listbusinessdetails({user}) {
-  const { postId, name, phone, email, ownerId, businessName, descriptions, industry, address, location} = useParams();
+  const { postId, name, phone, email, ownerId, businessName, descriptions, industry, address, location, uid} = useParams();
   const history = useHistory("");
   const [post, setPost] = useState();
 
@@ -32,7 +32,7 @@ if(!user){
       <a style={{display: "none"}} href="#yellowmobile" class="skip-link visually-hidden visually-hidden--focusable" id="skip-link">Jump to navigation
       </a>
     </p>
-                        <Header />
+                        <Header uid={uid}/>
 
         <div>
                 
@@ -201,9 +201,9 @@ if(!user){
                                                         </div>
                                                         <div class="col-md-4 col-sm-4 col-xs-12 knowledge-graph map-area">
    
-                                           
+
                                                                 <div class="suggest-edit"> 
-                                                                        <Link to={`/businesses-email/${name}/${phone}/${email}/${ownerId}/${businessName}/${industry}`} class="btn btn-lg btn-primary" title="Send an email message to Wairimu Car Hire">Send Message To {name}
+                                                                        <Link to={`/businesses-email/${postId}/${name}/${phone}/${email}/${ownerId}/${businessName}/${industry}/${auth?.currentUser?.uid}`} class="btn btn-lg btn-primary" title="Send an email message to Wairimu Car Hire">Send Message To {name}
                                                                         </Link>
                                                                 </div>
  

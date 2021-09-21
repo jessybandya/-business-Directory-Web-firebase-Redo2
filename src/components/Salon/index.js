@@ -2,11 +2,12 @@ import React, {useEffect, useState} from 'react';
 import './styles.css'
 import Posts from './Posts';
 import {auth,db} from './../firebase'
-import { useHistory } from 'react-router-dom';
+import { useHistory,useParams } from 'react-router-dom';
 import Header from "../Header"
 import Footer from "../Footer"
 
 function Salon() {
+    let {uid} = useParams();
     const history = useHistory("");
     const [posts, setPosts] = useState([]);
    const {currentUser} = auth
@@ -27,7 +28,7 @@ function Salon() {
       <a style={{display: "none"}} href="#yellowmobile" class="skip-link visually-hidden visually-hidden--focusable" id="skip-link">Jump to navigation
       </a>
     </p>
-                <Header />
+                <Header uid={uid}/>
                 <main style={{marginTop: 70}}>
                 <section data-cat="886" class="search-results" itemscope itemtype="https://schema.org/ItemList https://schema.org/LocalBusiness">
                                 <div class="container">

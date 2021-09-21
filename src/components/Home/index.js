@@ -38,6 +38,7 @@ import ContactPhoneSharpIcon from '@material-ui/icons/ContactPhoneSharp';
 import VpnKeySharpIcon from '@material-ui/icons/VpnKeySharp';
 import WorkIcon from '@material-ui/icons/Work';
 import BookIcon from '@material-ui/icons/Book';
+import Header from '../Header';
 
 
 function Home({user}) {
@@ -93,86 +94,7 @@ function Home({user}) {
 
 
   
-          <header  class="header">
-                            <div style={{position: "fixed",width: "100%",display: "flex",zIndex: 2,transitionTimingFunction: "ease-in",transition: "all 0.5s"}} class="navigation">
-                                <div class="container">
-                                     <nav class="navbar navbar-expand-lg navbar-light main-nav"> 
-                                     {auth?.currentUser?.uid &&(
-                                          <>
-                                               <a href={`/home/${auth?.currentUser?.uid}`} title="Home" rel="home" class="header__logo navbar-brand logo-img">
-                                               <img src={logo} style={{height:50}} alt="Home" class="header__logo-image"  />
-                                               </a> 
-                                          </>
-                                        )}
-                                        {!auth?.currentUser?.uid &&(
-                                          <>
-                                               <a href={`/`} title="Home" rel="home" class="header__logo navbar-brand logo-img">
-                                               <img src={logo} style={{height:50}} alt="Home" class="header__logo-image"  />
-                                               </a> 
-                                          </>
-                                        )}
-                                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#yellowmobile" aria-controls="yellowmobile" aria-expanded="false" aria-label="Toggle navigation"> 
-                                                <span class="navbar-toggler-icon"></span> 
-                                            </button>
-                                            <div class="collapse navbar-collapse" id="yellowmobile">
-                                                <ul class="navbar-nav mr-auto">
-                                                {auth?.currentUser?.uid &&(
-
-                                                <li class="nav-item"> 
-                                                     <a class="nav-link" 
-                                                        href={`/home/${auth?.currentUser?.uid}`}  aria-label="Business categories"><p style={{color:"#fff"}}>Home</p><span class="sr-only">(current)</span>
-                                                    </a>
-                                                    </li>
-                                                )}
-                                                {!auth?.currentUser?.uid &&(
-
-<li class="nav-item"> 
-     <a class="nav-link" 
-        href={`/`}  aria-label="Business categories"><p style={{color:"#fff"}}>Home</p><span class="sr-only">(current)</span>
-    </a>
-    </li>
-)}
-                                                    {/* <li class="nav-item"> 
-                                                    <a class="nav-link" 
-                                                        href="/categories"  aria-label="Business categories"><p style={{color:"#fff"}}>Categories</p><span class="sr-only">(current)</span>
-                                                    </a>
-                                                    </li> */}
-
- 
-                                                  
-                                                   <li class="nav-item"> <a class="nav-link " href="/about-us" aria-label="contact us"><p style={{color:"#fff"}}>About Us</p></a></li>
-
-                                                        <li class="nav-item"> <a class="nav-link " href="/contact-us" aria-label="contact us"><p style={{color:"#fff"}}>Contact Us</p></a></li>
-
-                                                        <li class="nav-item">
-                                        <a class="nav-link " aria-label="contact us" href="/register-business">
-                                        <p style={{color:"#fff",marginRight:8,fontWeight: "900"}}>Add Business</p>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link " aria-label="contact us" href="/login-client">
-                                        <p style={{color:"#fff",marginRight:8,fontWeight: "900"}}>Add Job</p>
-                                        </a>
-                                    </li>
-                                                        </ul>
-                                                        {auth?.currentUser?.uid &&(
-                                                            <>
-                                                         <a href={`/notifications/${auth?.currentUser?.uid}`}> 
-                                                          <Badge badgeContent={messageCount} color="error">
-                                                        
-                                                        <NotificationsIcon style={{color: "#fff"}}/>
-                                                       </Badge>
-                                                        </a>
-                                                            </>
-                                                        )}
-                                                        <Navbar style={{right:100}} />
-
-
-                                                        </div> 
-                                                        </nav>
-                                                        </div>
-                                                        </div>
-                         </header>
+       <Header/>
                          
                    <main style={{marginTop: 70}}>
                    <h1 class="hidden" style={{display: "none"}}></h1> 
@@ -201,7 +123,7 @@ function Home({user}) {
               posts !== undefined ? (
                 filteredUsers.map((user1) => (
                   <li>
-                    <a  href={`/list-businesses-details/${user1.ownerUsername}/${user1.phone}/${user1.ownerEmail}/${user1.ownerId}/${user1.businessName}/${user1.descriptions}/${user1.industry}`}>
+                    <a  href={`/searchresults/${user1.industry}/${user1.businessName}`}>
                       <Avatar className="searchAvatar" src="https://cdn.yellowpageskenya.com/business-logo.png" />
                       <h3 className="searchH3">{user1.businessName} </h3>
                     </a>
@@ -237,7 +159,313 @@ function Home({user}) {
                             </section>
                             <section class="featured-categories">
                             <div class="container view-content">
+                                {/* 1st Row */}
         <div class="row">
+        <div class="col-md-2 col-sm-6 col-xs-12 category">
+                <div class="category-inner">
+                    <h3> <a href="/schools" title="Schools - We have rich, factual, and authentic information about schools in the country. Primary schools, Secondary school, and Universities and colleges." aria-label="We have rich, factual, and authentic information about schools in the country. Primary schools, Secondary school, and Universities and colleges." data-title="Schools">
+                        <span>
+                            <SchoolIcon />
+                            </span>Schools
+                        </a>
+                    </h3>
+                </div>
+            </div>
+        <div class="col-md-2 col-sm-6 col-xs-12 category">
+                        <div class="category-inner">
+                            <h3> <a href="/salons" title="Salon - We know you have been looking for that salon in Umoja, Nairobi! We got it.." aria-label="We know you have been looking for that salon in Umoja, Nairobi! We got it.." data-title="Salon">
+                                <span>
+                                    <FaceIcon />
+                                    </span>Salon
+                                </a>
+                            </h3>
+                        </div>
+                    </div>
+            <div class="col-md-2 col-sm-6 col-xs-12 category">
+                <div class="category-inner">
+                    <h3> <a href="/restaurants" title="Restaurants - Msimu huu tunapokaribia likizo,pata mikahawa kwa urahisi.Mikahawa maeneo ya Nairobi, Mombasa, Kisumu na kote nchini" aria-label="Msimu huu tunapokaribia likizo,pata mikahawa kwa urahisi.Mikahawa maeneo ya Nairobi, Mombasa, Kisumu na kote nchini" data-title="Restaurants">
+                        <span><RestaurantIcon />
+                        </span>Restaurants
+                        </a>
+                    </h3>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-6 col-xs-12 category">
+            <div class="category-inner"><h3> <a href="/car-hire" title="Car Hire - The holidays are around the corner and just like everyone else, we know you need a vehicle to move around with family. Find a taxi cab today" aria-label="The holidays are around the corner and just like everyone else, we know you need a vehicle to move around with family. Find a taxi cab today" data-title="Car Hire">
+                <span>
+                    <LocalTaxiIcon /></span>Car Hire</a>
+                    </h3>
+                </div>
+            </div>
+
+            <div class="col-md-2 col-sm-6 col-xs-12 category">
+                <div class="category-inner">
+                    <h3> 
+                        <a href="/auto-repairs" title="Auto Repairs - Just like any other asset, your vehicle is just as important. That is why you should have it checked often. Wondering where you can get a repair shop, find one near you here!" aria-label="Just like any other asset, your vehicle is just as important. That is why you should have it checked often. Wondering where you can get a repair shop, find one near you here!" data-title="Auto Repairs">
+                            <span><BuildIcon /></span>Auto Repairs
+                            </a>
+                        </h3>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-6 col-xs-12 category">
+                    <div class="category-inner">
+                        <h3> 
+                            <a href="/hospitals" title="Hospitals - We have information of hospitals all over the country. Hospitals in Nairobi. Thika, Kitengela, Ruiru, Nakuru, Naivasha,Kisumu, Mobasa NHIF accredited hospitals, those with affordable insurance etc" aria-label="We have information of hospitals all over the country. Hospitals in Nairobi. Thika, Kitengela, Ruiru, Nakuru, Naivasha,Kisumu, Mobasa NHIF accredited hospitals, those with affordable insurance etc" data-title="Hospitals">
+                                <span><LocalHospitalIcon /></span>Hospitals
+                                </a>
+                            </h3>
+                        </div>
+                    </div>
+
+                </div>
+
+
+{/* 2nd Row */}
+
+                <div style={{marginTop: 20}} class="row">
+        <div class="col-md-2 col-sm-6 col-xs-12 category">
+                <div class="category-inner">
+                    <h3> <a href="/schools" title="Schools - We have rich, factual, and authentic information about schools in the country. Primary schools, Secondary school, and Universities and colleges." aria-label="We have rich, factual, and authentic information about schools in the country. Primary schools, Secondary school, and Universities and colleges." data-title="Schools">
+                        <span>
+                            <SchoolIcon />
+                            </span>Schools
+                        </a>
+                    </h3>
+                </div>
+            </div>
+        <div class="col-md-2 col-sm-6 col-xs-12 category">
+                        <div class="category-inner">
+                            <h3> <a href="/salons" title="Salon - We know you have been looking for that salon in Umoja, Nairobi! We got it.." aria-label="We know you have been looking for that salon in Umoja, Nairobi! We got it.." data-title="Salon">
+                                <span>
+                                    <FaceIcon />
+                                    </span>Salon
+                                </a>
+                            </h3>
+                        </div>
+                    </div>
+            <div class="col-md-2 col-sm-6 col-xs-12 category">
+                <div class="category-inner">
+                    <h3> <a href="/restaurants" title="Restaurants - Msimu huu tunapokaribia likizo,pata mikahawa kwa urahisi.Mikahawa maeneo ya Nairobi, Mombasa, Kisumu na kote nchini" aria-label="Msimu huu tunapokaribia likizo,pata mikahawa kwa urahisi.Mikahawa maeneo ya Nairobi, Mombasa, Kisumu na kote nchini" data-title="Restaurants">
+                        <span><RestaurantIcon />
+                        </span>Restaurants
+                        </a>
+                    </h3>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-6 col-xs-12 category">
+            <div class="category-inner"><h3> <a href="/car-hire" title="Car Hire - The holidays are around the corner and just like everyone else, we know you need a vehicle to move around with family. Find a taxi cab today" aria-label="The holidays are around the corner and just like everyone else, we know you need a vehicle to move around with family. Find a taxi cab today" data-title="Car Hire">
+                <span>
+                    <LocalTaxiIcon /></span>Car Hire</a>
+                    </h3>
+                </div>
+            </div>
+
+            <div class="col-md-2 col-sm-6 col-xs-12 category">
+                <div class="category-inner">
+                    <h3> 
+                        <a href="/auto-repairs" title="Auto Repairs - Just like any other asset, your vehicle is just as important. That is why you should have it checked often. Wondering where you can get a repair shop, find one near you here!" aria-label="Just like any other asset, your vehicle is just as important. That is why you should have it checked often. Wondering where you can get a repair shop, find one near you here!" data-title="Auto Repairs">
+                            <span><BuildIcon /></span>Auto Repairs
+                            </a>
+                        </h3>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-6 col-xs-12 category">
+                    <div class="category-inner">
+                        <h3> 
+                            <a href="/hospitals" title="Hospitals - We have information of hospitals all over the country. Hospitals in Nairobi. Thika, Kitengela, Ruiru, Nakuru, Naivasha,Kisumu, Mobasa NHIF accredited hospitals, those with affordable insurance etc" aria-label="We have information of hospitals all over the country. Hospitals in Nairobi. Thika, Kitengela, Ruiru, Nakuru, Naivasha,Kisumu, Mobasa NHIF accredited hospitals, those with affordable insurance etc" data-title="Hospitals">
+                                <span><LocalHospitalIcon /></span>Hospitals
+                                </a>
+                            </h3>
+                        </div>
+                    </div>
+
+                </div>
+
+                {/* 3rd Row */}
+
+                <div style={{marginTop: 20}} class="row">
+        <div class="col-md-2 col-sm-6 col-xs-12 category">
+                <div class="category-inner">
+                    <h3> <a href="/schools" title="Schools - We have rich, factual, and authentic information about schools in the country. Primary schools, Secondary school, and Universities and colleges." aria-label="We have rich, factual, and authentic information about schools in the country. Primary schools, Secondary school, and Universities and colleges." data-title="Schools">
+                        <span>
+                            <SchoolIcon />
+                            </span>Schools
+                        </a>
+                    </h3>
+                </div>
+            </div>
+        <div class="col-md-2 col-sm-6 col-xs-12 category">
+                        <div class="category-inner">
+                            <h3> <a href="/salons" title="Salon - We know you have been looking for that salon in Umoja, Nairobi! We got it.." aria-label="We know you have been looking for that salon in Umoja, Nairobi! We got it.." data-title="Salon">
+                                <span>
+                                    <FaceIcon />
+                                    </span>Salon
+                                </a>
+                            </h3>
+                        </div>
+                    </div>
+            <div class="col-md-2 col-sm-6 col-xs-12 category">
+                <div class="category-inner">
+                    <h3> <a href="/restaurants" title="Restaurants - Msimu huu tunapokaribia likizo,pata mikahawa kwa urahisi.Mikahawa maeneo ya Nairobi, Mombasa, Kisumu na kote nchini" aria-label="Msimu huu tunapokaribia likizo,pata mikahawa kwa urahisi.Mikahawa maeneo ya Nairobi, Mombasa, Kisumu na kote nchini" data-title="Restaurants">
+                        <span><RestaurantIcon />
+                        </span>Restaurants
+                        </a>
+                    </h3>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-6 col-xs-12 category">
+            <div class="category-inner"><h3> <a href="/car-hire" title="Car Hire - The holidays are around the corner and just like everyone else, we know you need a vehicle to move around with family. Find a taxi cab today" aria-label="The holidays are around the corner and just like everyone else, we know you need a vehicle to move around with family. Find a taxi cab today" data-title="Car Hire">
+                <span>
+                    <LocalTaxiIcon /></span>Car Hire</a>
+                    </h3>
+                </div>
+            </div>
+
+            <div class="col-md-2 col-sm-6 col-xs-12 category">
+                <div class="category-inner">
+                    <h3> 
+                        <a href="/auto-repairs" title="Auto Repairs - Just like any other asset, your vehicle is just as important. That is why you should have it checked often. Wondering where you can get a repair shop, find one near you here!" aria-label="Just like any other asset, your vehicle is just as important. That is why you should have it checked often. Wondering where you can get a repair shop, find one near you here!" data-title="Auto Repairs">
+                            <span><BuildIcon /></span>Auto Repairs
+                            </a>
+                        </h3>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-6 col-xs-12 category">
+                    <div class="category-inner">
+                        <h3> 
+                            <a href="/hospitals" title="Hospitals - We have information of hospitals all over the country. Hospitals in Nairobi. Thika, Kitengela, Ruiru, Nakuru, Naivasha,Kisumu, Mobasa NHIF accredited hospitals, those with affordable insurance etc" aria-label="We have information of hospitals all over the country. Hospitals in Nairobi. Thika, Kitengela, Ruiru, Nakuru, Naivasha,Kisumu, Mobasa NHIF accredited hospitals, those with affordable insurance etc" data-title="Hospitals">
+                                <span><LocalHospitalIcon /></span>Hospitals
+                                </a>
+                            </h3>
+                        </div>
+                    </div>
+
+                </div>
+
+                {/* 4th Row */}
+                <div style={{marginTop: 20}} class="row">
+        <div class="col-md-2 col-sm-6 col-xs-12 category">
+                <div class="category-inner">
+                    <h3> <a href="/schools" title="Schools - We have rich, factual, and authentic information about schools in the country. Primary schools, Secondary school, and Universities and colleges." aria-label="We have rich, factual, and authentic information about schools in the country. Primary schools, Secondary school, and Universities and colleges." data-title="Schools">
+                        <span>
+                            <SchoolIcon />
+                            </span>Schools
+                        </a>
+                    </h3>
+                </div>
+            </div>
+        <div class="col-md-2 col-sm-6 col-xs-12 category">
+                        <div class="category-inner">
+                            <h3> <a href="/salons" title="Salon - We know you have been looking for that salon in Umoja, Nairobi! We got it.." aria-label="We know you have been looking for that salon in Umoja, Nairobi! We got it.." data-title="Salon">
+                                <span>
+                                    <FaceIcon />
+                                    </span>Salon
+                                </a>
+                            </h3>
+                        </div>
+                    </div>
+            <div class="col-md-2 col-sm-6 col-xs-12 category">
+                <div class="category-inner">
+                    <h3> <a href="/restaurants" title="Restaurants - Msimu huu tunapokaribia likizo,pata mikahawa kwa urahisi.Mikahawa maeneo ya Nairobi, Mombasa, Kisumu na kote nchini" aria-label="Msimu huu tunapokaribia likizo,pata mikahawa kwa urahisi.Mikahawa maeneo ya Nairobi, Mombasa, Kisumu na kote nchini" data-title="Restaurants">
+                        <span><RestaurantIcon />
+                        </span>Restaurants
+                        </a>
+                    </h3>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-6 col-xs-12 category">
+            <div class="category-inner"><h3> <a href="/car-hire" title="Car Hire - The holidays are around the corner and just like everyone else, we know you need a vehicle to move around with family. Find a taxi cab today" aria-label="The holidays are around the corner and just like everyone else, we know you need a vehicle to move around with family. Find a taxi cab today" data-title="Car Hire">
+                <span>
+                    <LocalTaxiIcon /></span>Car Hire</a>
+                    </h3>
+                </div>
+            </div>
+
+            <div class="col-md-2 col-sm-6 col-xs-12 category">
+                <div class="category-inner">
+                    <h3> 
+                        <a href="/auto-repairs" title="Auto Repairs - Just like any other asset, your vehicle is just as important. That is why you should have it checked often. Wondering where you can get a repair shop, find one near you here!" aria-label="Just like any other asset, your vehicle is just as important. That is why you should have it checked often. Wondering where you can get a repair shop, find one near you here!" data-title="Auto Repairs">
+                            <span><BuildIcon /></span>Auto Repairs
+                            </a>
+                        </h3>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-6 col-xs-12 category">
+                    <div class="category-inner">
+                        <h3> 
+                            <a href="/hospitals" title="Hospitals - We have information of hospitals all over the country. Hospitals in Nairobi. Thika, Kitengela, Ruiru, Nakuru, Naivasha,Kisumu, Mobasa NHIF accredited hospitals, those with affordable insurance etc" aria-label="We have information of hospitals all over the country. Hospitals in Nairobi. Thika, Kitengela, Ruiru, Nakuru, Naivasha,Kisumu, Mobasa NHIF accredited hospitals, those with affordable insurance etc" data-title="Hospitals">
+                                <span><LocalHospitalIcon /></span>Hospitals
+                                </a>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                
+
+
+                {/* 5th Floor */}
+                <div style={{marginTop: 20}} class="row">
+        <div class="col-md-2 col-sm-6 col-xs-12 category">
+                <div class="category-inner">
+                    <h3> <a href="/schools" title="Schools - We have rich, factual, and authentic information about schools in the country. Primary schools, Secondary school, and Universities and colleges." aria-label="We have rich, factual, and authentic information about schools in the country. Primary schools, Secondary school, and Universities and colleges." data-title="Schools">
+                        <span>
+                            <SchoolIcon />
+                            </span>Schools
+                        </a>
+                    </h3>
+                </div>
+            </div>
+        <div class="col-md-2 col-sm-6 col-xs-12 category">
+                        <div class="category-inner">
+                            <h3> <a href="/salons" title="Salon - We know you have been looking for that salon in Umoja, Nairobi! We got it.." aria-label="We know you have been looking for that salon in Umoja, Nairobi! We got it.." data-title="Salon">
+                                <span>
+                                    <FaceIcon />
+                                    </span>Salon
+                                </a>
+                            </h3>
+                        </div>
+                    </div>
+            <div class="col-md-2 col-sm-6 col-xs-12 category">
+                <div class="category-inner">
+                    <h3> <a href="/restaurants" title="Restaurants - Msimu huu tunapokaribia likizo,pata mikahawa kwa urahisi.Mikahawa maeneo ya Nairobi, Mombasa, Kisumu na kote nchini" aria-label="Msimu huu tunapokaribia likizo,pata mikahawa kwa urahisi.Mikahawa maeneo ya Nairobi, Mombasa, Kisumu na kote nchini" data-title="Restaurants">
+                        <span><RestaurantIcon />
+                        </span>Restaurants
+                        </a>
+                    </h3>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-6 col-xs-12 category">
+            <div class="category-inner"><h3> <a href="/car-hire" title="Car Hire - The holidays are around the corner and just like everyone else, we know you need a vehicle to move around with family. Find a taxi cab today" aria-label="The holidays are around the corner and just like everyone else, we know you need a vehicle to move around with family. Find a taxi cab today" data-title="Car Hire">
+                <span>
+                    <LocalTaxiIcon /></span>Car Hire</a>
+                    </h3>
+                </div>
+            </div>
+
+            <div class="col-md-2 col-sm-6 col-xs-12 category">
+                <div class="category-inner">
+                    <h3> 
+                        <a href="/auto-repairs" title="Auto Repairs - Just like any other asset, your vehicle is just as important. That is why you should have it checked often. Wondering where you can get a repair shop, find one near you here!" aria-label="Just like any other asset, your vehicle is just as important. That is why you should have it checked often. Wondering where you can get a repair shop, find one near you here!" data-title="Auto Repairs">
+                            <span><BuildIcon /></span>Auto Repairs
+                            </a>
+                        </h3>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-6 col-xs-12 category">
+                    <div class="category-inner">
+                        <h3> 
+                            <a href="/hospitals" title="Hospitals - We have information of hospitals all over the country. Hospitals in Nairobi. Thika, Kitengela, Ruiru, Nakuru, Naivasha,Kisumu, Mobasa NHIF accredited hospitals, those with affordable insurance etc" aria-label="We have information of hospitals all over the country. Hospitals in Nairobi. Thika, Kitengela, Ruiru, Nakuru, Naivasha,Kisumu, Mobasa NHIF accredited hospitals, those with affordable insurance etc" data-title="Hospitals">
+                                <span><LocalHospitalIcon /></span>Hospitals
+                                </a>
+                            </h3>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                {/* 6th Row */}
+                <div style={{marginTop: 20}} class="row">
         <div class="col-md-2 col-sm-6 col-xs-12 category">
                 <div class="category-inner">
                     <h3> <a href="/schools" title="Schools - We have rich, factual, and authentic information about schools in the country. Primary schools, Secondary school, and Universities and colleges." aria-label="We have rich, factual, and authentic information about schools in the country. Primary schools, Secondary school, and Universities and colleges." data-title="Schools">
